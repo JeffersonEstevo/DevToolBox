@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Contador de Palavras Repetidas</h2>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="mb-3">
+                <label for="original-text" class="form-label">Texto:</label>
+                <textarea id="original-text" class="form-control" rows="4" oninput="countWords()"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Palavras Repetidas</h5>
+                    <hr>
+                    <div id="repeated-words" class="card-text text-success freq-word"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'core/js/frequencia_palavras.js' %}"></script>
+</div>
+
+<style>
+.freq-word {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+</style>
+{% endblock %}

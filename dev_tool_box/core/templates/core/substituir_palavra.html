@@ -1,0 +1,55 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Substituir Palavra</h2>
+
+    <div class="mb-3">
+        <label for="original-text" class="form-label">Texto Original:</label>
+        <textarea id="original-text" class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="word-to-replace" class="form-label">Localizar:</label>
+        <input type="text" id="word-to-replace" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="replacement-word" class="form-label">Substituir por:</label>
+        <input type="text" id="replacement-word" class="form-control">
+    </div>
+
+    <button id="replace-button" class="btn btn-primary">Substituir</button>
+    
+    <div class="mb-3 mt-3">
+        <label for="final-text" class="form-label">Texto Final:</label>
+        <textarea id="final-text" class="form-control" rows="4" readonly></textarea>
+    </div>
+    
+    <button id="copy-button" class="btn btn-success m-3">Copiar</button>
+    <div id="copy-alert" class="alert alert-success d-none" role="alert">
+        Texto copiado com sucesso!
+    </div>
+
+
+    <!-- Importando o script externo 
+    <script src="{% static 'core/js/substituir_palavra.js' %}"></script>-->
+    <script src="{% static 'core/js/substituir_palavra.js' %}"></script>
+    
+     <!--
+    <script>
+        // Recarrega o script substituição de palavra
+        function reloadSubstituirPalavraScript() {
+            const script = document.createElement("script");
+            script.src = "{% static 'core/js/substituir_palavra.js' %}";
+            document.body.appendChild(script);
+        }
+
+        // Chama a função de recarregar o script após substituir o conteúdo
+        document.addEventListener("DOMContentLoaded", function () {
+            reloadSubstituirPalavraScript();
+        });
+    </script>-->
+</div>   
+{% endblock %}

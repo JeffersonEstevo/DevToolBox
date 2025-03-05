@@ -1,0 +1,57 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Contador de Caracteres</h2>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="mb-3">
+                <label for="original-text" class="form-label">Texto:</label>
+                <textarea id="original-text" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contagens</h5>
+                    <hr>
+                    <p class="card-text">Caracteres: <span id="char-count" class="count-text text-primary">0</span></p>
+                    <hr>
+                    <p class="card-text">Palavras: <span id="word-count" class="count-text text-success">0</span></p>
+                    <hr>
+                    <p class="card-text">Parágrafos: <span id="paragraph-count" class="count-text text-danger">0</span></p>
+                    <hr>
+                    <p class="card-text">Linhas: <span id="line-count" class="count-text text-warning">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'core/js/contador_caracteres.js' %}"></script>
+</div>
+
+<style>
+
+.count-text {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.text-primary {
+    color: #007bff;
+}
+.text-success {
+    color: #28a745;
+}
+.text-danger {
+    color: #dc3545;
+}
+.text-warning {
+    color: #ffc107;
+}
+
+</style>
+
+{% endblock %}
