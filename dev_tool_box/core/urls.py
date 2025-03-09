@@ -9,6 +9,7 @@ urlpatterns = [
     path('substituir_palavra/', views.substituir_palavra, name='substituir_palavra'),
     path('contador_caracteres/', views.contador_caracteres, name='contador_caracteres'),
     path('frequencia_palavras/', views.frequencia_palavras, name='frequencia_palavras'),
+    path('inverter_texto/', views.inverter_texto, name='inverter_texto'),
 ]
 
 if settings.DEBUG:

@@ -16,3 +16,6 @@ def contador_caracteres(request):
 
 def frequencia_palavras(request):
     return render(request, "core/frequencia_palavras.html")
+
+def inverter_texto(request):
+    return render(request, "core/inverter_texto.html")

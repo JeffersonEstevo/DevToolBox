@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Inversor de Texto</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="original-text" class="form-label">Texto:</label>
+                <textarea id="original-text" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="inverted-text" class="form-label">Texto Invertido:</label>
+                <textarea id="inverted-text" class="form-control" rows="4" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <button id="invert-button" class="btn btn-primary">Inverter Texto</button>
+</div>
+
+<script src="{% static 'core/js/inverter_texto.js' %}"></script>
+
+<style>
+.inverted-word {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+</style>
+{% endblock %}
