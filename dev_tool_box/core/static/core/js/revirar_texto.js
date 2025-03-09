@@ -2,8 +2,8 @@ document.getElementById('turn-button').addEventListener('click', turnText);
 
 function turnText() {
     var originalText = document.getElementById('original-text').value;
-    var invertedText = flipString(originalText);
-    document.getElementById('turned-text').value = invertedText;
+    var turnedText = flipString(originalText);
+    document.getElementById('turned-text').value = turnedText;
 }
 
 function flipString(text) {
