@@ -1,0 +1,39 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Converter texto minúscula, maiúscula, capitalizar, camelCase</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="original-text" class="form-label">Texto:</label>
+                <textarea id="original-text" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="modified-text" class="form-label">Texto Modificado:</label>
+                <textarea id="modified-text" class="form-control" rows="4" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <button id="lowercase-letter-button" class="btn btn-primary">letra minúscula</button>
+    <button id="uppercase-letter-button" class="btn btn-primary">LETRA MAIÚSUCULA</button>
+    <button id="capitalize-button" class="btn btn-primary">Capitalizar texto</button>
+    <button id="alternate-button" class="btn btn-primary">LeTrAs AlTeRnAdAs</button>
+    <button id="camelcase-button" class="btn btn-primary">camelCase</button>
+
+</div>
+
+<button id="clean-button" class="btn btn-warning m-3">Limpar</button>
+<button id="copy-button" class="btn btn-success m-3">Copiar</button>
+<div id="copy-alert" class="alert alert-success d-none" role="alert">
+    Texto copiado com sucesso!
+</div>
+
+<script src="{% static 'core/js/converter_texto.js' %}"></script>
+
+{% endblock %}

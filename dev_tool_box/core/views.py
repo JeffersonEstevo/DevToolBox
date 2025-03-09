@@ -22,3 +22,6 @@ def inverter_texto(request):
 
 def revirar_texto(request):
     return render(request, "core/revirar_texto.html")
+
+def converter_texto(request):
+    return render(request, "core/converter_texto.html")

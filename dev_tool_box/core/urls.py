@@ -11,6 +11,7 @@ urlpatterns = [
     path('frequencia_palavras/', views.frequencia_palavras, name='frequencia_palavras'),
     path('inverter_texto/', views.inverter_texto, name='inverter_texto'),
     path('revirar_texto/', views.revirar_texto, name='revirar_texto'),
+    path('converter_texto/', views.converter_texto, name='converter_texto'),
 ]
 
 if settings.DEBUG:
