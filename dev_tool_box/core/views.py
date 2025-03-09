@@ -25,3 +25,6 @@ def revirar_texto(request):
 
 def converter_texto(request):
     return render(request, "core/converter_texto.html")
+
+def remover_espacos(request):
+    return render(request, "core/remover_espacos.html")
