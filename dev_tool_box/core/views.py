@@ -19,3 +19,6 @@ def frequencia_palavras(request):
 
 def inverter_texto(request):
     return render(request, "core/inverter_texto.html")
+
+def revirar_texto(request):
+    return render(request, "core/revirar_texto.html")

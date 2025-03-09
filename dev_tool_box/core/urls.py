@@ -10,6 +10,7 @@ urlpatterns = [
     path('contador_caracteres/', views.contador_caracteres, name='contador_caracteres'),
     path('frequencia_palavras/', views.frequencia_palavras, name='frequencia_palavras'),
     path('inverter_texto/', views.inverter_texto, name='inverter_texto'),
+    path('revirar_texto/', views.revirar_texto, name='revirar_texto'),
 ]
 
 if settings.DEBUG:
