@@ -32,45 +32,68 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Função para configurar os ouvintes de eventos
     function setupEventListeners() {
         const replaceButton = document.getElementById("replace-button");
         const copyButton = document.getElementById("copy-button");
         const copyAlert = document.getElementById("copy-alert");
+        const originalTextArea = document.getElementById("original-text");
+
+        originalTextArea.addEventListener("paste", function(event) {
+            event.preventDefault();
+            let text = (event.clipboardData || window.clipboardData).getData("text");
+            console.log("Texto colado antes da modificação:", JSON.stringify(text));
+            document.execCommand("insertText", false, text);
+        });
 
         if (replaceButton) {
             replaceButton.addEventListener("click", function() {
-                const originalText = document.getElementById("original-text").value;
+                let originalText = originalTextArea.value;
                 const wordToReplace = document.getElementById("word-to-replace").value;
                 const replacementWord = document.getElementById("replacement-word").value;
+                const replaceTabs = document.getElementById("replace-tabs").checked;
+                let tabReplacement = document.getElementById("tab-replacement").value;
 
-                const finalText = originalText.split(wordToReplace).join(replacementWord);
+                // Se o campo estiver vazio, usa 4 espaços como padrão
+                if (!tabReplacement) {
+                    tabReplacement = "    ";
+                }
+
+                //console.log("Texto original recebido:", JSON.stringify(originalText));
+
+                let finalText = originalText;
+
+                if (wordToReplace) {
+                    finalText = finalText.replace(new RegExp(wordToReplace, 'g'), replacementWord);
+                }
+
+                if (replaceTabs) {
+                    finalText = finalText.replace(/\t/g, tabReplacement);
+                    //console.log(`Texto após substituir tabulações por: "${tabReplacement}"`, JSON.stringify(finalText));
+                }
+
                 document.getElementById("final-text").value = finalText;
+                //console.log("Texto final exibido:", JSON.stringify(finalText));
             });
-        } else {
-            console.error("Erro: Botão 'replace-button' não encontrado!");
         }
 
         if (copyButton) {
             copyButton.addEventListener("click", function() {
                 const finalText = document.getElementById("final-text");
                 finalText.select();
-                finalText.setSelectionRange(0, 99999); // Para dispositivos móveis
+                finalText.setSelectionRange(0, 99999);
 
                 try {
                     document.execCommand("copy");
                     copyAlert.classList.remove("d-none");
-                    setTimeout(function() {
-                        copyAlert.classList.add("d-none");
-                    }, 3000); // Oculta o alerta após 3 segundos
+                    setTimeout(() => copyAlert.classList.add("d-none"), 3000);
                 } catch (err) {
                     console.error("Erro ao copiar texto: ", err);
                 }
             });
-        } else {
-            console.error("Erro: Botão 'copy-button' não encontrado!");
         }
     }
 
     setupEventListeners();
 });
+
+

@@ -7,7 +7,7 @@
 
     <div class="mb-3">
         <label for="original-text" class="form-label">Texto Original:</label>
-        <textarea id="original-text" class="form-control" rows="4"></textarea>
+        <textarea id="original-text" class="form-control" rows="4" style="white-space: pre-wrap;"></textarea>
     </div>
 
     <div class="mb-3">
@@ -20,36 +20,29 @@
         <input type="text" id="replacement-word" class="form-control">
     </div>
 
-    <button id="replace-button" class="btn btn-primary">Substituir</button>
-    
-    <div class="mb-3 mt-3">
-        <label for="final-text" class="form-label">Texto Final:</label>
-        <textarea id="final-text" class="form-control" rows="4" readonly></textarea>
+    <div class="mb-3 form-check">
+        <input type="checkbox" id="replace-tabs" class="form-check-input">
+        <label class="form-check-label" for="replace-tabs">Substituir tabulações</label>
+    </div>
+    <div class="mb-3">
+        <label for="tab-replacement" class="form-label">Substituir tabulação por:</label>
+        <input type="text" id="tab-replacement" class="form-control" placeholder="Digite o texto ou deixe em branco para 4 espaços">
     </div>
     
+
+    <button id="replace-button" class="btn btn-primary">Substituir</button>
+
+    <div class="mb-3 mt-3">
+        <label for="final-text" class="form-label">Texto Final:</label>
+        <textarea id="final-text" class="form-control" rows="4" style="white-space: pre-wrap;" readonly></textarea>
+    </div>
+
     <button id="copy-button" class="btn btn-success m-3">Copiar</button>
+
     <div id="copy-alert" class="alert alert-success d-none" role="alert">
         Texto copiado com sucesso!
     </div>
 
-
-    <!-- Importando o script externo 
-    <script src="{% static 'core/js/substituir_palavra.js' %}"></script>-->
     <script src="{% static 'core/js/substituir_palavra.js' %}"></script>
-    
-     <!--
-    <script>
-        // Recarrega o script substituição de palavra
-        function reloadSubstituirPalavraScript() {
-            const script = document.createElement("script");
-            script.src = "{% static 'core/js/substituir_palavra.js' %}";
-            document.body.appendChild(script);
-        }
-
-        // Chama a função de recarregar o script após substituir o conteúdo
-        document.addEventListener("DOMContentLoaded", function () {
-            reloadSubstituirPalavraScript();
-        });
-    </script>-->
-</div>   
+</div>
 {% endblock %}
