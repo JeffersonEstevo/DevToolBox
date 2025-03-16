@@ -9,40 +9,44 @@ def home(request):
 #     return render(request, "core/base.html")  # Página completa se for acesso normal
 
 def substituir_palavra(request):
-    return render(request, 'core/substituir_palavra.html')
+    return render(request, 'core/texto/substituir_palavra.html')
 
 def contador_caracteres(request):
-    return render(request, "core/contador_caracteres.html")
+    return render(request, "core/texto/contador_caracteres.html")
 
 def frequencia_palavras(request):
-    return render(request, "core/frequencia_palavras.html")
+    return render(request, "core/texto/frequencia_palavras.html")
 
 def inverter_texto(request):
-    return render(request, "core/inverter_texto.html")
+    return render(request, "core/texto/inverter_texto.html")
 
 def revirar_texto(request):
-    return render(request, "core/revirar_texto.html")
+    return render(request, "core/texto/revirar_texto.html")
 
 def converter_texto(request):
-    return render(request, "core/converter_texto.html")
+    return render(request, "core/texto/converter_texto.html")
 
 def remover_espacos(request):
-    return render(request, "core/remover_espacos.html")
+    return render(request, "core/texto/remover_espacos.html")
 
 def remover_acentos(request):
-    return render(request, "core/remover_acentos.html")
+    return render(request, "core/texto/remover_acentos.html")
 
 def remover_pontuacao(request):
-    return render(request, "core/remover_pontuacao.html")
+    return render(request, "core/texto/remover_pontuacao.html")
 
 def remover_quebras(request):
-    return render(request, "core/remover_quebras.html")
+    return render(request, "core/texto/remover_quebras.html")
 
 def remover_texto_entre_caracteres(request):
-    return render(request, "core/remover_texto_entre_caracteres.html")
+    return render(request, "core/texto/remover_texto_entre_caracteres.html")
 
 def leitura_dinamica(request):
-    return render(request, "core/leitura_dinamica.html")
+    return render(request, "core/texto/leitura_dinamica.html")
 
 def similaridade_textos(request):
-    return render(request, "core/similaridade_textos.html")
+    return render(request, "core/texto/similaridade_textos.html")
+
+def porcentagem(request):
+    pass
+    #return render(request, "core/similaridade_textos.html")

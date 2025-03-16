@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),  # Página inicial
+
     path('substituir_palavra/', views.substituir_palavra, name='substituir_palavra'),
     path('contador_caracteres/', views.contador_caracteres, name='contador_caracteres'),
     path('frequencia_palavras/', views.frequencia_palavras, name='frequencia_palavras'),
@@ -19,6 +20,8 @@ urlpatterns = [
     path('remover_texto_entre_caracteres/', views.remover_texto_entre_caracteres, name='remover_texto_entre_caracteres'),
     path('leitura_dinamica/', views.leitura_dinamica, name='leitura_dinamica'),
     path('similaridade_textos/', views.similaridade_textos, name='similaridade_textos'),
+
+    path('calculadoras/sporcentagem/', views.porcentagem, name='porcentagem'),
 ]
 
 if settings.DEBUG:

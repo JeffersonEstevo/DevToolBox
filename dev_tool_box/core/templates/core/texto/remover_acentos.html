@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    <h2 class="mt-4">Remover espaços extra de texto</h2>
+    <h2 class="mt-4">Remover Acentos de Texto</h2>
 
     <div class="row">
         <div class="col-md-6">
@@ -15,12 +15,12 @@
 
         <div class="col-md-6">
             <div class="mb-3">
-                <label for="modified-text" class="form-label">Texto Final:</label>
+                <label for="modified-text" class="form-label">Texto Sem Acentos:</label>
                 <textarea id="modified-text" class="form-control" rows="4" readonly></textarea>
             </div>
         </div>
     </div>
-    <button id="remove-space-button" class="btn btn-primary">Remover espaços extra</button>
+    <button id="remove-accents-button" class="btn btn-primary">Remover Acentos</button>
 </div>
 
 <button id="clean-button" class="btn btn-warning m-3">Limpar</button>
@@ -29,6 +29,6 @@
     Texto copiado com sucesso!
 </div>
 
-<script src="{% static 'core/js/remover_espacos.js' %}"></script>
+<script src="{% static 'core/js/texto/remover_acentos.js' %}"></script>
 
 {% endblock %}
