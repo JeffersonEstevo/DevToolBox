@@ -15,6 +15,7 @@ urlpatterns = [
     path('remover_espacos/', views.remover_espacos, name='remover_espacos'),
     path('remover_acentos/', views.remover_acentos, name='remover_acentos'),
     path('remover_pontuacao/', views.remover_pontuacao, name='remover_pontuacao'),
+    path('remover_quebras/', views.remover_quebras, name='remover_quebras'),
 ]
 
 if settings.DEBUG:

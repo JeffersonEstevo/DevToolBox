@@ -34,3 +34,6 @@ def remover_acentos(request):
 
 def remover_pontuacao(request):
     return render(request, "core/remover_pontuacao.html")
+
+def remover_quebras(request):
+    return render(request, "core/remover_quebras.html")
