@@ -21,7 +21,7 @@ urlpatterns = [
     path('leitura_dinamica/', views.leitura_dinamica, name='leitura_dinamica'),
     path('similaridade_textos/', views.similaridade_textos, name='similaridade_textos'),
 
-    path('calculadoras/sporcentagem/', views.porcentagem, name='porcentagem'),
+    path('porcentagem/', views.porcentagem, name='porcentagem'),
 ]
 
 if settings.DEBUG:

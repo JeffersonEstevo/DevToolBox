@@ -48,5 +48,5 @@ def similaridade_textos(request):
     return render(request, "core/texto/similaridade_textos.html")
 
 def porcentagem(request):
-    pass
-    #return render(request, "core/similaridade_textos.html")
+    return render(request, "core/calculadoras/porcentagem.html")
+    

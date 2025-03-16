@@ -1,0 +1,107 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Calculadora de Porcentagem</h2>
+
+    <!-- Quanto é X% de Y -->
+    <div class="mb-4">
+        <h5>Quanto é X% de Y?</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Quanto é</span>
+            <input type="number" id="percentage-of-value" class="form-control" placeholder="Porcentagem (X)">
+            <span class="input-group-text">% de</span>
+            <input type="number" id="value-of-percentage" class="form-control" placeholder="Valor (Y)">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="result-quantity" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-quantity" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-quantity" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <!-- O valor X é qual porcentagem de Y -->
+    <div class="mb-4">
+        <h5>O valor X é qual porcentagem de Y?</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">O valor</span>
+            <input type="number" id="partial-value" class="form-control" placeholder="Valor (X)">
+            <span class="input-group-text">é de</span>
+            <input type="number" id="total-value" class="form-control" placeholder="Valor Total (Y)">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="result-percentage" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-percentage" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-percentage" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <!-- O valor X representa Y% de -->
+    <div class="mb-4">
+        <h5>O valor X representa Y% de:</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">O valor</span>
+            <input type="number" id="partial-value-of-total" class="form-control" placeholder="Valor (X)">
+            <span class="input-group-text">representa</span>
+            <input type="number" id="percentage-of-total" class="form-control" placeholder="Porcentagem (Y)">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="result-total-value" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-total" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-total" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <!-- O valor X aumentado em Y% -->
+    <div class="mb-4">
+        <h5>O valor X aumentado em Y% resulta em:</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">O valor</span>
+            <input type="number" id="base-value-increase" class="form-control" placeholder="Valor Base (X)">
+            <span class="input-group-text">aumentado em</span>
+            <input type="number" id="percentage-increase" class="form-control" placeholder="Porcentagem (Y)">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="result-increase" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-increase" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-increase" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <!-- O valor X diminuído em Y% -->
+    <div class="mb-4">
+        <h5>O valor X diminuído em Y% resulta em:</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">O valor</span>
+            <input type="number" id="base-value-decrease" class="form-control" placeholder="Valor Base (X)">
+            <span class="input-group-text">diminuído em</span>
+            <input type="number" id="percentage-decrease" class="form-control" placeholder="Porcentagem (Y)">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="result-decrease" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-decrease" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-decrease" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+
+<script src="{% static 'core/js/calculadoras/porcentagem.js' %}"></script>
+{% endblock %}
