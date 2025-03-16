@@ -31,3 +31,6 @@ def remover_espacos(request):
 
 def remover_acentos(request):
     return render(request, "core/remover_acentos.html")
+
+def remover_pontuacao(request):
+    return render(request, "core/remover_pontuacao.html")
