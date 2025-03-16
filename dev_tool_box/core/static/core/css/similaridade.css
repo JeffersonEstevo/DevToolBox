@@ -1,0 +1,24 @@
+.freq-word {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.similarity-none {
+    color: red;
+}
+
+.similarity-insignificant {
+    color: orange;
+}
+
+.similarity-reduced {
+    color: gold;
+}
+
+.similarity-some {
+    color: lightgreen;
+}
+
+.similarity-high {
+    color: green;
+}

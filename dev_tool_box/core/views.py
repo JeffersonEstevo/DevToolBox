@@ -43,3 +43,6 @@ def remover_texto_entre_caracteres(request):
 
 def leitura_dinamica(request):
     return render(request, "core/leitura_dinamica.html")
+
+def similaridade_textos(request):
+    return render(request, "core/similaridade_textos.html")

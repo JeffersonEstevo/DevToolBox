@@ -18,6 +18,7 @@ urlpatterns = [
     path('remover_quebras/', views.remover_quebras, name='remover_quebras'),
     path('remover_texto_entre_caracteres/', views.remover_texto_entre_caracteres, name='remover_texto_entre_caracteres'),
     path('leitura_dinamica/', views.leitura_dinamica, name='leitura_dinamica'),
+    path('similaridade_textos/', views.similaridade_textos, name='similaridade_textos'),
 ]
 
 if settings.DEBUG:

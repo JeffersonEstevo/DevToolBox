@@ -16,6 +16,7 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
         <link rel="stylesheet" href="{% static 'core/css/leitura_dinamica.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/similaridade.css' %}">
 
     </head>
     <body>
@@ -41,6 +42,7 @@
                             <li><a class="dropdown-item" href="{% url 'remover_quebras' %}">Remover Quebras de Texto</a></li>
                             <li><a class="dropdown-item" href="{% url 'remover_texto_entre_caracteres' %}">Remover Texto Entre Caracteres</a></li>
                             <li><a class="dropdown-item" href="{% url 'leitura_dinamica' %}">Leitura Dinâmica</a></li>
+                            <li><a class="dropdown-item" href="{% url 'similaridade_textos' %}">Similaridade Entre Textos</a></li>
                         </ul>
                     </div>
                 </div>
