@@ -28,3 +28,6 @@ def converter_texto(request):
 
 def remover_espacos(request):
     return render(request, "core/remover_espacos.html")
+
+def remover_acentos(request):
+    return render(request, "core/remover_acentos.html")

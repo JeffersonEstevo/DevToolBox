@@ -13,6 +13,7 @@ urlpatterns = [
     path('revirar_texto/', views.revirar_texto, name='revirar_texto'),
     path('converter_texto/', views.converter_texto, name='converter_texto'),
     path('remover_espacos/', views.remover_espacos, name='remover_espacos'),
+    path('remover_acentos/', views.remover_acentos, name='remover_acentos'),
 ]
 
 if settings.DEBUG:
