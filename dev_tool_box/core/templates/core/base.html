@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/leitura_dinamica.css' %}">
+
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -38,6 +40,7 @@
                             <li><a class="dropdown-item" href="{% url 'remover_pontuacao' %}">Remover Pontuação</a></li>
                             <li><a class="dropdown-item" href="{% url 'remover_quebras' %}">Remover Quebras de Texto</a></li>
                             <li><a class="dropdown-item" href="{% url 'remover_texto_entre_caracteres' %}">Remover Texto Entre Caracteres</a></li>
+                            <li><a class="dropdown-item" href="{% url 'leitura_dinamica' %}">Leitura Dinâmica</a></li>
                         </ul>
                     </div>
                 </div>

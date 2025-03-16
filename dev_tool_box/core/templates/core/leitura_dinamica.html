@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Leitura Dinâmica</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="input-text" class="form-label">Texto para leitura:</label>
+                <textarea id="input-text" class="form-control" rows="6"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="speed" class="form-label">Velocidade (ms por palavra):</label>
+                <input id="speed" type="number" class="form-control" value="300" min="50">
+            </div>
+            <div class="mb-3">
+                <label for="font-size" class="form-label">Tamanho da Fonte (px):</label>
+                <input id="font-size" type="number" class="form-control" value="48" min="20">
+            </div>
+            <div class="mb-3">
+                <label for="theme" class="form-label">Modo:</label>
+                <select id="theme" class="form-select">
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                </select>
+            </div>
+            <button id="start-button" class="btn btn-primary">Iniciar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Tela de leitura dinâmica -->
+<div id="dynamic-reader" class="fullscreen-overlay d-none">
+    <div id="reader-container" class="d-flex justify-content-center align-items-center vh-100 reader-light">
+        <span id="current-word" class="word"></span>
+    </div>
+    <button id="stop-button" class="btn btn-danger stop-button">Parar</button>
+</div>
+
+
+<script src="{% static 'core/js/leitura_dinamica.js' %}"></script>
+
+{% endblock %}
+

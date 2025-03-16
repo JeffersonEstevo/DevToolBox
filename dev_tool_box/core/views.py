@@ -40,3 +40,6 @@ def remover_quebras(request):
 
 def remover_texto_entre_caracteres(request):
     return render(request, "core/remover_texto_entre_caracteres.html")
+
+def leitura_dinamica(request):
+    return render(request, "core/leitura_dinamica.html")

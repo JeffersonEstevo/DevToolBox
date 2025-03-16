@@ -1,0 +1,59 @@
+#dynamic-reader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#reader-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reader-light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.reader-dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#current-word {
+    font-weight: bold;
+}
+
+#stop-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    z-index: 1100; /* Para garantir que fique sempre visível */
+}
+
+/*
+#reader-container {
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+}
+
+#stop-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+*/
