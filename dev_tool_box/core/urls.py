@@ -16,6 +16,7 @@ urlpatterns = [
     path('remover_acentos/', views.remover_acentos, name='remover_acentos'),
     path('remover_pontuacao/', views.remover_pontuacao, name='remover_pontuacao'),
     path('remover_quebras/', views.remover_quebras, name='remover_quebras'),
+    path('remover_texto_entre_caracteres/', views.remover_texto_entre_caracteres, name='remover_texto_entre_caracteres'),
 ]
 
 if settings.DEBUG:

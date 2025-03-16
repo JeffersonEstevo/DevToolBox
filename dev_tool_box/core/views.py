@@ -37,3 +37,6 @@ def remover_pontuacao(request):
 
 def remover_quebras(request):
     return render(request, "core/remover_quebras.html")
+
+def remover_texto_entre_caracteres(request):
+    return render(request, "core/remover_texto_entre_caracteres.html")

@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Extrair Informações com Base em Caracteres</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="original-text" class="form-label">Texto:</label>
+                <textarea id="original-text" class="form-control" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="delimiter" class="form-label">Escolha o delimitador:</label>
+                <select id="delimiter" class="form-select">
+                    <option value="()">Parênteses ()</option>
+                    <option value="{}">Chaves {}</option>
+                    <option value="[]">Colchetes []</option>
+                    <option value="<>">Menores e Maiores <></option>
+                    <option value="''">Aspas Simples ''</option>
+                    <option value='""'>Aspas Duplas ""</option>
+                    <option value="//">Barras //</option>
+                    <option value="--">Traços --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="extracted-text" class="form-label">Informações Extraídas:</label>
+                <textarea id="extracted-text" class="form-control" rows="4" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <button id="extract-button" class="btn btn-primary">Extrair Informações</button>
+</div>
+
+<button id="clean-button" class="btn btn-warning m-3">Limpar</button>
+<button id="copy-button" class="btn btn-success m-3">Copiar</button>
+<div id="copy-alert" class="alert alert-success d-none" role="alert">
+    Texto copiado com sucesso!
+</div>
+
+<script src="{% static 'core/js/remover_texto_entre_caracteres.js' %}"></script>
+
+{% endblock %}
