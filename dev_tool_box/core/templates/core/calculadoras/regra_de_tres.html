@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Calculadora de Regra de Três</h2>
+
+    <!-- Cálculo de Regra de Três -->
+    <div class="mb-4">
+        <h5>a está para b assim como c está para x:</h5>
+        <div class="input-group mb-3">
+            <span class="input-group-text">a</span>
+            <input type="number" id="value-a" class="form-control" placeholder="Digite o valor de a">
+            <span class="input-group-text">b</span>
+            <input type="number" id="value-b" class="form-control" placeholder="Digite o valor de b">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">c</span>
+            <input type="number" id="value-c" class="form-control" placeholder="Digite o valor de c">
+            <span class="input-group-text">x</span>
+            <input type="text" id="value-x" class="form-control" readonly placeholder="Resultado">
+        </div>
+        <div class="input-group mb-3">
+            <button id="calculate-rule" class="btn btn-primary">Calcular</button>
+            <button id="copy-rule" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-rule" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+</div>
+
+<script src="{% static 'core/js/calculadoras/regra_de_tres.js' %}"></script>
+{% endblock %}

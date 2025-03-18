@@ -20,8 +20,10 @@ urlpatterns = [
     path('remover_texto_entre_caracteres/', views.remover_texto_entre_caracteres, name='remover_texto_entre_caracteres'),
     path('leitura_dinamica/', views.leitura_dinamica, name='leitura_dinamica'),
     path('similaridade_textos/', views.similaridade_textos, name='similaridade_textos'),
+    
 
     path('porcentagem/', views.porcentagem, name='porcentagem'),
+    path('regra_de_tres/', views.regra_de_tres, name='regra_de_tres'),
 ]
 
 if settings.DEBUG:

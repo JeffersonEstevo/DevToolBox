@@ -49,4 +49,7 @@ def similaridade_textos(request):
 
 def porcentagem(request):
     return render(request, "core/calculadoras/porcentagem.html")
+
+def regra_de_tres(request):
+    return render(request, "core/calculadoras/regra_de_tres.html")
     
