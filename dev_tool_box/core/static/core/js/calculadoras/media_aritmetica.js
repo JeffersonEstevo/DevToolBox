@@ -2,7 +2,11 @@ document.getElementById("input-numbers").addEventListener("input", calculateResu
 
 function calculateResults() {
     const input = document.getElementById("input-numbers").value;
-    const values = input.split(/[\n,]+/).map(v => parseFloat(v.trim())).filter(v => !isNaN(v));
+
+    // Substituir vírgulas e normalizar para lidar corretamente com separadores
+    const values = input.split(/[\n,]+/) // Divide os elementos por vírgulas ou novas linhas
+        .map(v => parseFloat(v.trim().replace(',', '.'))) // Substitui vírgula decimal por ponto e converte para número
+        .filter(v => !isNaN(v)); // Filtra apenas números válidos
 
     const numberOfTerms = values.length;
     const minValue = Math.min(...values);
