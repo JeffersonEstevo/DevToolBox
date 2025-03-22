@@ -24,6 +24,7 @@ urlpatterns = [
 
     path('porcentagem/', views.porcentagem, name='porcentagem'),
     path('regra_de_tres/', views.regra_de_tres, name='regra_de_tres'),
+    path('media_aritmetica/', views.media_aritmetica, name='media_aritmetica'),
 ]
 
 if settings.DEBUG:

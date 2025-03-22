@@ -53,3 +53,5 @@ def porcentagem(request):
 def regra_de_tres(request):
     return render(request, "core/calculadoras/regra_de_tres.html")
     
+def media_aritmetica(request):
+    return render(request, "core/calculadoras/media_aritmetica.html")

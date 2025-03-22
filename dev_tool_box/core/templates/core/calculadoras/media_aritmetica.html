@@ -1,0 +1,75 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Calcular Média Aritmética</h2>
+
+    <div class="mb-3">
+        <label for="input-numbers" class="form-label">Valores:</label>
+        <textarea id="input-numbers" class="form-control" rows="4" placeholder="Digite os valores separados por vírgula ou linha"></textarea>
+    </div>
+
+    <div class="mb-4">
+        <h5>Número de termos:</h5>
+        <div class="input-group mb-3">
+            <input type="text" id="number-of-terms" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-terms" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-terms" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <div class="mb-4">
+        <h5>Valor mínimo:</h5>
+        <div class="input-group mb-3">
+            <input type="text" id="min-value" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-min" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-min" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <div class="mb-4">
+        <h5>Valor máximo:</h5>
+        <div class="input-group mb-3">
+            <input type="text" id="max-value" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-max" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-max" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <div class="mb-4">
+        <h5>Intervalo de valores:</h5>
+        <div class="input-group mb-3">
+            <input type="text" id="range-values" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-range" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-range" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <div class="mb-4">
+        <h5>Média Aritmética (x̄):</h5>
+        <div class="input-group mb-3">
+            <input type="text" id="mean-value" class="form-control" readonly placeholder="Resultado">
+            <button id="copy-mean" class="btn btn-success">Copiar</button>
+        </div>
+        <div id="copy-alert-mean" class="alert alert-success d-none" role="alert">
+            Resultado copiado com sucesso!
+        </div>
+        <hr>
+    </div>
+
+    <script src="{% static 'core/js/calculadoras/media_aritmetica.js' %}"></script>
+</div>
+{% endblock %}
