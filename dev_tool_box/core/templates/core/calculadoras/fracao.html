@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Calculadora de Frações</h2>
+    
+    <div class="row">
+        <div class="col-md-5">
+            <input type="number" id="numerator1" class="form-control mb-2" placeholder="Numerador 1">
+            <hr>
+            <input type="number" id="denominator1" class="form-control mb-2" placeholder="Denominador 1">
+        </div>
+        <div class="col-md-2 text-center">
+            <select id="operation" class="form-select my-4">
+                <option value="add">Somar</option>
+                <option value="subtract">Subtrair</option>
+                <option value="multiply">Multiplicar</option>
+                <option value="divide">Dividir</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="numerator2" class="form-control mb-2" placeholder="Numerador 2">
+            <hr>
+            <input type="number" id="denominator2" class="form-control mb-2" placeholder="Denominador 2">
+        </div>
+    </div>
+    
+    <div class="text-center my-3">
+        <button id="calculate" class="btn btn-primary">Calcular</button>
+    </div>
+    
+    <div class="result-container text-center">
+        <h5>Resultado em fração</h5>
+        <div class="alert alert-success" id="fraction-result">...</div>
+        <h5>Resultado em decimal (arredondado)</h5>
+        <div class="alert alert-success" id="decimal-result">...</div>
+    </div>
+    
+    <script src="{% static 'core/js/calculadoras/fracao.js' %}"></script>
+</div>
+{% endblock %}

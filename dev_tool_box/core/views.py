@@ -55,3 +55,6 @@ def regra_de_tres(request):
     
 def media_aritmetica(request):
     return render(request, "core/calculadoras/media_aritmetica.html")
+
+def fracao(request):
+    return render(request, "core/calculadoras/fracao.html")
