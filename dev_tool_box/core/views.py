@@ -58,3 +58,6 @@ def media_aritmetica(request):
 
 def fracao(request):
     return render(request, "core/calculadoras/fracao.html")
+
+def cientifica(request):
+    return render(request, "core/calculadoras/cientifica.html")

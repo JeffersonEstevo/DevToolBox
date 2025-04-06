@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h2 class="mt-4">Calculadora Científica</h2>
+    
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" disabled>
+        </div>
+        <div class="buttons">
+            <button>(</button>
+            <button>)</button>
+            <button>%</button>
+            <button>mc</button>
+            <button>m+</button>
+            <button>m-</button>
+            <button>mr</button>
+            <button>1/x</button>
+            <button>x²</button>
+            <button>x³</button>
+            <button>y^x</button>
+            <button>AC</button>
+            <button>+/-</button>
+            <button>/</button>
+            <button>!</button>
+            <button>√x</button>
+            <button>∛x</button>
+            <button>log</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+            <button>sin</button>
+            <button>cos</button>
+            <button>tan</button>
+            <button>log₂</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+            <button>sinh</button>
+            <button>cosh</button>
+            <button>tanh</button>
+            <button>2^x</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button>Deg</button>
+            <button>π</button>
+            <button>EE</button>
+            <button>Rand</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
+    </div>
+    
+    <script src="{% static 'core/js/calculadoras/cientifica.js' %}"></script>
+</div>
+{% endblock %}

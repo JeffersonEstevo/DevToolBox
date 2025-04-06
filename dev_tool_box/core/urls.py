@@ -26,6 +26,7 @@ urlpatterns = [
     path('regra_de_tres/', views.regra_de_tres, name='regra_de_tres'),
     path('media_aritmetica/', views.media_aritmetica, name='media_aritmetica'),
     path('fracao/', views.fracao, name='fracao'),
+    path('cientifica/', views.cientifica, name='cientifica'),
 ]
 
 if settings.DEBUG:
