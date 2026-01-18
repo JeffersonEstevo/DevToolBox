@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonsContainer.style.cssText = "display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; justify-content: center; padding: 10px;";
     
     // Definição dos botões corretamente organizados
-    const buttonLayout = [
+    /*const buttonLayout = [
         "m+", "m-", "%", "mc",
         "(", ")", "1/x", "AC",
         "x²", "x³", "y^x", "√x",
@@ -78,6 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
         "9", "*", "4", "5",
         "6", "-", "1", "2",
         "3", "+", "0", ".",
+        "π", "=", "EE", "Rand"
+    ];*/
+
+    const buttonLayout = [
+        "m+", "m-", "%", "mc",
+        "(", ")", "1/x", "AC",
+        "x²", "x³", "y^x", "√x",
+        "∛x", "+/-", "!", "/",
+        "sin", "cos", "tan", "log",
+        "ln", "exp", ".", "*",
+        "7", "8", "9", "-",
+        "4", "5", "6", "+",
+        "1", "2", "3", "=",
         "π", "=", "EE", "Rand"
     ];
     
